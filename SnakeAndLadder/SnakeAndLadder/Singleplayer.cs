@@ -49,12 +49,11 @@ namespace SnakeAndLadder
                 }
                 
                 if (StartPoint >= 100)
-                {
-                    
+                {     
                     Console.WriteLine("Player Won!");
                 }
                
-             }
+              }
          
            }
 
