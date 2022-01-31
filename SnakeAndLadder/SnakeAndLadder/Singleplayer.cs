@@ -54,6 +54,7 @@ namespace SnakeAndLadder
                 }
                
               }
+            Console.WriteLine("Exact win position : " +StartPoint);
           }
        }
     }
