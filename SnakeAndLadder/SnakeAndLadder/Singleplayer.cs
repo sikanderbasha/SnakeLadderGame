@@ -8,12 +8,13 @@ namespace SnakeAndLadder
 {
     internal class Singleplayer
     {
-        int StartPoint = 0;
+        int StartPoint = 0, Count = 0;
         const int Ladder = 1, Snake = 2, No_Play = 0, WinningPosition = 100;
         
         Random random = new Random();
         public int Dice()
         {
+            Count++;
             return random.Next(1, 7);
         }
 
@@ -54,7 +55,8 @@ namespace SnakeAndLadder
                 }
                
               }
-            Console.WriteLine("Exact win position : " +StartPoint);
-          }
+              Console.WriteLine("Exact win position : " +StartPoint);
+              Console.WriteLine("Dice rolled : " +Count +" times");
+           }       
        }
     }
