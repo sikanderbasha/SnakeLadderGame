@@ -8,14 +8,37 @@ namespace SnakeAndLadder
 {
     internal class Singleplayer
     {
-        public int StartPoint = 0; 
-        public int Dice;
+        int StartPoint = 0;
+        const int Ladder = 1, Snake = 2, No_Play = 0;
+        
+        Random random = new Random();
+        public int Dice()
+        {
+            return random.Next(1, 7);
+        }
+
         public void StartPlay()
         {
-            Random random = new Random(); 
-            Dice = random.Next(1, 7); 
+            int option = random.Next(0, 3);
             Console.WriteLine("Player Role......");
-            Console.WriteLine("Dice number is : " + Dice);
+            switch (option)
+            {
+                
+                case Ladder:
+                    StartPoint += Dice();
+                    Console.WriteLine("Player moves ahead by " + StartPoint);
+                    break;
+                case Snake:
+                    StartPoint -= Dice();
+                    Console.WriteLine("Player moves behind by " + StartPoint);
+                    break;
+                case No_Play:
+                    Console.WriteLine("Player is in the same position");
+                    break;
+                default:
+                    break;
+            }
+
         }
     }
 }
