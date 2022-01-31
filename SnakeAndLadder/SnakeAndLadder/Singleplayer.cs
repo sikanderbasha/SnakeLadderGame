@@ -27,7 +27,7 @@ namespace SnakeAndLadder
                 {
 
                     case Ladder:
-                        if (StartPoint + Dice() <= 100)
+                        if (StartPoint + Dice() < 100)
                         {
                             StartPoint += Dice();
                             Console.WriteLine("Player moves ahead to " + StartPoint);
@@ -54,8 +54,6 @@ namespace SnakeAndLadder
                 }
                
               }
-         
-           }
-
+          }
        }
     }
